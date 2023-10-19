@@ -17,20 +17,19 @@ Constraints
 
 import numpy as np
 
-def zeros(arr):
-    arr1 = np.zeros(arr)
-    print(arr1)
-    # return arr1
+def zeros(arr): # function to take np.array value to create np.zeros array
+    arr1 = np.zeros(arr, dtype = np.int32)
+    return arr1
 
-def ones(arr):
-    arr2 = np.ones(arr)
-    print(arr2)
-    # return arr2
+def ones(arr): # function to take np.array value to create np.ones array
+    arr2 = np.ones(arr, dtype = np.int32)
+    return arr2
 
-arr = input().strip().split(' ')
-new_arr = np.array(arr, dtype = int)
-print(new_arr)
-print(type(new_arr))
+arr = input().strip().split(' ') # takes user input as list
+new_arr = np.array(arr, dtype = np.int32) # converts string input to become np.array intergers 
+# print(new_arr) # <- printing values of new array
+# print(type(new_arr)) <-- check array datatype
 
-print(zeros(new_arr), ones(new_arr))
+print(zeros(new_arr)) # print function zeros to return np.zeros array
+print(ones(new_arr)) # print function zeros to return np.ones array
 
