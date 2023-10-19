@@ -18,17 +18,19 @@ Constraints
 import numpy as np
 
 def zeros(arr):
-    arr1 = np.zeros(arr, dtype = float)
-    return arr1
+    arr1 = np.zeros(arr)
+    print(arr1)
+    # return arr1
 
 def ones(arr):
-    arr2 = np.ones(arr, dtype = float)
-    return arr2
+    arr2 = np.ones(arr)
+    print(arr2)
+    # return arr2
 
 arr = input().strip().split(' ')
-print(result = zeros(arr))
-print(result = ones(arr))
+new_arr = np.array(arr, dtype = int)
+print(new_arr)
+print(type(new_arr))
 
-"""
-WTF is wrong??
-"""
+print(zeros(new_arr), ones(new_arr))
+
