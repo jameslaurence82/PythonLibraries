@@ -217,3 +217,6 @@ print(a4)
 
 indices = np.array([2, 3, 4])
 print(a4[indices])
+
+c3 = np.ndarray(shape=(2,2))
+print(c3)
