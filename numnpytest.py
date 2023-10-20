@@ -187,7 +187,7 @@ a = np.array([
 ])
 
 # Numpy array slicing on multidimensional arrays
-prinbt("Numpy array slicing on multidimensional arrays")
+print("Numpy array slicing on multidimensional arrays")
 print(a[0:2, :])
 
 b2 = np.array([
@@ -197,3 +197,23 @@ b2 = np.array([
 ])
 
 print(b2[1:, 1:])
+
+# NDARRAY
+# print("Using ndarray will have an error like this")
+# b3 = np.ndarray(
+#     [
+#         [1, 2, 3],
+#         [4, 5, 6]
+#     ]
+# )
+
+# print(b3)
+# print(b3.ndim)
+
+# Fancy Indexing
+print("Fancy Indexing")
+a4 = np.arange(1, 10)
+print(a4)
+
+indices = np.array([2, 3, 4])
+print(a4[indices])
