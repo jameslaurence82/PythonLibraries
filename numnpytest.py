@@ -220,3 +220,93 @@ print(a4[indices])
 
 c3 = np.ndarray(shape=(2,2))
 print(c3)
+
+
+# boolean indexing
+print()
+print("boolean indexing \n to pull values that match argument requirements from np.array")
+x1 = np.array([1, 2, 3])
+y1 = np.array([True, True, False])
+z1 = x1[y1]
+print(z1)
+
+a4 = np.arange(1, 10)
+b4 = a4 > 5
+print(b4)
+
+c4 = a4[b4]
+print(c4)
+
+# numpy copy
+print()
+print("numpy copy")
+
+a5 = np.array([
+    [1, 2, 3],
+    [4, 5, 6]
+])
+print("make a view")
+b5 = a5[0:, 0:2]
+print(b5)
+
+b5[0, 0] = 0
+print(b5)
+print(a5)
+
+print("make a copy")
+# make a copy
+b6 = a5[0:, 0:2].copy()
+print(b6)
+print()
+b6[0, 0] = 0
+print(b6)
+
+print(a5)
+
+"""
+numpy sum
+"""
+print("numpy sum")
+a6 = np.array([
+    [1, 2, 3],
+    [4, 5, 6]
+])
+total = np.sum(a6)
+print(total)
+
+# axis 0 is the entire column values and
+# axis 1 is the entire column values 
+print("######\n axis 0 is the entire column values and\n axis 1 is the entire column values \n######")
+total = np.sum(a6, axis=0)
+print(total)
+
+total = np.sum(a6, axis=1)
+print(total)
+
+#numpy mean
+print()
+print("numpy mean")
+total = np.mean(a6, axis=0)
+print(total)
+
+total = np.mean(a6, axis=1)
+print(total)
+
+"""
+NumPy Variance var()
+"""
+print()
+print("NumPy variance var()")
+a7 = np.array([1, 2, 3])
+result = np.var(a7)
+print(round(result,3))
+
+"""
+NumPy Standard Deviation std()
+"""
+print()
+print("NumPy Standard Deviation std()")
+diameters = np.array([591, 239, 210, 207, 201, 182,
+                      176, 176, 175, 170, 170, 169, 168, ])
+result1 = np.std(diameters)
+print(round(result1, 1))
